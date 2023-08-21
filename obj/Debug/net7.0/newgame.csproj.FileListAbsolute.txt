@@ -1,0 +1,14 @@
+C:\Users\Luna\development\c#\newgame\bin\Debug\net7.0\newgame.exe
+C:\Users\Luna\development\c#\newgame\bin\Debug\net7.0\newgame.deps.json
+C:\Users\Luna\development\c#\newgame\bin\Debug\net7.0\newgame.runtimeconfig.json
+C:\Users\Luna\development\c#\newgame\bin\Debug\net7.0\newgame.dll
+C:\Users\Luna\development\c#\newgame\bin\Debug\net7.0\newgame.pdb
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\newgame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\newgame.AssemblyInfoInputs.cache
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\newgame.AssemblyInfo.cs
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\newgame.csproj.CoreCompileInputs.cache
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\newgame.dll
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\refint\newgame.dll
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\newgame.pdb
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\newgame.genruntimeconfig.cache
+C:\Users\Luna\development\c#\newgame\obj\Debug\net7.0\ref\newgame.dll
