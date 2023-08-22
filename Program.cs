@@ -13,7 +13,7 @@ namespace newgame
     {
         static void Main(string[] args)
         {
-            // Game.GameStart();
+            Game.GameStart();
         }
     }
 

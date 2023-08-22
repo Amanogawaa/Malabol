@@ -25,7 +25,7 @@ public class Player
         if (isPlayer == true)
         {
             players.Add(this);
-            Console.Write("Player Added!");
+            Console.WriteLine("Player Added!");
         }
     }
 

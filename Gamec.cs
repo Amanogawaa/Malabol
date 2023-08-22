@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace newgame;
 
 public class Game
@@ -30,17 +32,20 @@ public class Game
                     string? gender = Console.ReadLine();
                     if (int.TryParse(gender, out choice) && choice == 1)
                     {
-                        Console.WriteLine("Okay!, gigaChad!");
+                        Console.WriteLine("Understood!");
                     }
                     else if (int.TryParse(gender, out choice) && choice == 2)
                     {
-                        Console.WriteLine("You've chosen to be a.. nvm you're a ghurl!");
+                        Console.WriteLine("Understood!");
                     }
                     else
                     {
                         Console.WriteLine("Invalid Choice!");
                     }
                     Player player = new Player(name, gender, true);
+                    AdClass.PrintStats();
+                    Console.WriteLine("Choose your class: ");
+                    string? chosenClass = Console.ReadLine();
                     isCreating = false;
                 }
             }

@@ -35,6 +35,18 @@ public class AdClass
 
     public static void PrintStats()
     {
-        StringBuilder string = new StringBuilder();
+        StringBuilder str = new StringBuilder();
+        str.AppendLine("-----------------------------------------------------");
+
+        for (int i = 0; i < AdventurClass.Count; i++)
+        {
+            str.AppendLine($"\n[1] {AdventurClass[i].adventurerClass}")
+            .AppendLine($"Hp: {AdventurClass[i].playerHp}")
+            .AppendLine($"Mp: {AdventurClass[i].playerMp}")
+            .AppendLine($"Physical Attack: {AdventurClass[i].physicalAttack}")
+            .AppendLine($"Magic Attack: {AdventurClass[i].magicAttack}")
+            .AppendLine($"Defense: {AdventurClass[i].defense}");
+        }
+        Console.WriteLine(str.ToString());
     }
 }
