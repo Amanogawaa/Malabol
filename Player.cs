@@ -38,6 +38,7 @@ public class Player
     public static Player Denzel = new Player("Denzel", "Male", false);
     public static Player Supido = new Player("Supido", "Male", false);
 
+
     // public static Player Tanga = new Player("Tanga", true);
     // public static Player Manyakol = new Player("Manyakol", true);
     // public static Player Bobo = new Player("Bobo", true);

@@ -1,7 +1,7 @@
 using System.Text;
 
 namespace newgame;
-public class AdClass
+public class AdventurerClass
 {
     public string? adventurerClass;
     public int playerHp;
@@ -9,9 +9,9 @@ public class AdClass
     public int physicalAttack;
     public int magicAttack;
     public int defense;
-    public static List<AdClass> AdventurClass = new List<AdClass>();
+    public static List<AdventurerClass> AdventurClass = new List<AdventurerClass>();
 
-    public AdClass(string adventurerClass, int playerHp, int playerMp, int physicalAttack, int magicAttack, int defense)
+    public AdventurerClass(string adventurerClass, int playerHp, int playerMp, int physicalAttack, int magicAttack, int defense)
     {
         this.adventurerClass = adventurerClass;
         this.playerHp = playerHp;
@@ -22,16 +22,16 @@ public class AdClass
         AdventurClass.Add(this);
     }
     //hero, bandit, astrologer, warrior, prisoner, confessor, wretch, vagabond, prophet, samurai (elden ring character classes)
-    public static AdClass Hero = new AdClass("Hero", 10, 10, 5, 0, 10);
-    public static AdClass Bandit = new AdClass("Bandit", 10, 5, 5, 0, 5);
-    public static AdClass Astrologer = new AdClass("Astrologer", 10, 15, 4, 10, 9);
-    public static AdClass Warrior = new AdClass("Warrior", 10, 5, 5, 0, 10);
-    public static AdClass Prisoner = new AdClass("Prisoner", 8, 8, 5, 0, 9);
-    public static AdClass Confessor = new AdClass("Confessor", 10, 10, 5, 10, 9);
-    public static AdClass Wretch = new AdClass("Wretch", 10, 5, 5, 0, 9);
-    public static AdClass Vagabond = new AdClass("Vagabond", 10, 5, 6, 0, 10);
-    public static AdClass Prophet = new AdClass("Prophet", 10, 10, 5, 5, 10);
-    public static AdClass Samurai = new AdClass("Samurai", 10, 10, 10, 0, 10);
+    public static AdventurerClass Hero = new AdventurerClass("Hero", 10, 10, 5, 0, 10);
+    public static AdventurerClass Bandit = new AdventurerClass("Bandit", 10, 5, 5, 0, 5);
+    public static AdventurerClass Astrologer = new AdventurerClass("Astrologer", 10, 15, 4, 10, 9);
+    public static AdventurerClass Warrior = new AdventurerClass("Warrior", 10, 5, 5, 0, 10);
+    public static AdventurerClass Prisoner = new AdventurerClass("Prisoner", 8, 8, 5, 0, 9);
+    public static AdventurerClass Confessor = new AdventurerClass("Confessor", 10, 10, 5, 10, 9);
+    public static AdventurerClass Wretch = new AdventurerClass("Wretch", 10, 5, 5, 0, 9);
+    public static AdventurerClass Vagabond = new AdventurerClass("Vagabond", 10, 5, 6, 0, 10);
+    public static AdventurerClass Prophet = new AdventurerClass("Prophet", 10, 10, 5, 5, 10);
+    public static AdventurerClass Samurai = new AdventurerClass("Samurai", 10, 10, 10, 0, 10);
 
     public static void PrintStats()
     {
