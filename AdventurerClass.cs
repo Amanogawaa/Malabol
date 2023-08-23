@@ -9,7 +9,6 @@ public class AdventurerClass
     public int physicalAttack;
     public int magicAttack;
     public int defense;
-    public static List<AdventurerClass> AdventurClass = new List<AdventurerClass>();
 
     public AdventurerClass(string adventurerClass, int playerHp, int playerMp, int physicalAttack, int magicAttack, int defense)
     {
@@ -19,33 +18,34 @@ public class AdventurerClass
         this.physicalAttack = physicalAttack;
         this.magicAttack = magicAttack;
         this.defense = defense;
-        AdventurClass.Add(this);
     }
-    //hero, bandit, astrologer, warrior, prisoner, confessor, wretch, vagabond, prophet, samurai (elden ring character classes)
-    public static AdventurerClass Hero = new AdventurerClass("Hero", 10, 10, 5, 0, 10);
-    public static AdventurerClass Bandit = new AdventurerClass("Bandit", 10, 5, 5, 0, 5);
-    public static AdventurerClass Astrologer = new AdventurerClass("Astrologer", 10, 15, 4, 10, 9);
-    public static AdventurerClass Warrior = new AdventurerClass("Warrior", 10, 5, 5, 0, 10);
-    public static AdventurerClass Prisoner = new AdventurerClass("Prisoner", 8, 8, 5, 0, 9);
-    public static AdventurerClass Confessor = new AdventurerClass("Confessor", 10, 10, 5, 10, 9);
-    public static AdventurerClass Wretch = new AdventurerClass("Wretch", 10, 5, 5, 0, 9);
-    public static AdventurerClass Vagabond = new AdventurerClass("Vagabond", 10, 5, 6, 0, 10);
-    public static AdventurerClass Prophet = new AdventurerClass("Prophet", 10, 10, 5, 5, 10);
-    public static AdventurerClass Samurai = new AdventurerClass("Samurai", 10, 10, 10, 0, 10);
+
+    //Human, Elf, Half Elf, Dhan, Giant, Dark Elf, Dekan, Trinity
+    public static List<AdventurerClass> AdventurerClassName = new List<AdventurerClass>
+    {
+        new AdventurerClass("Human", 100, 50, 20, 10, 15),
+        new AdventurerClass("Elf", 80, 100, 15, 20, 10),
+        new AdventurerClass("Half Elf", 90, 80, 18, 18, 12),
+        new AdventurerClass("Dhan", 110, 40, 25, 5, 20),
+        new AdventurerClass("Giant", 150, 20, 30, 2, 25),
+        new AdventurerClass("Dark Elf", 85, 110, 17, 22, 8),
+        new AdventurerClass("Dekan", 120, 60, 22, 8, 18),
+        new AdventurerClass("Trinity", 95, 95, 19, 19, 14)
+    };
 
     public static void PrintStats()
     {
         StringBuilder str = new StringBuilder();
         str.AppendLine("-----------------------------------------------------");
 
-        for (int i = 0; i < AdventurClass.Count; i++)
+        for (int i = 0; i < AdventurerClassName.Count; i++)
         {
-            str.AppendLine($"\n[1] {AdventurClass[i].adventurerClass}")
-            .AppendLine($"Hp: {AdventurClass[i].playerHp}")
-            .AppendLine($"Mp: {AdventurClass[i].playerMp}")
-            .AppendLine($"Physical Attack: {AdventurClass[i].physicalAttack}")
-            .AppendLine($"Magic Attack: {AdventurClass[i].magicAttack}")
-            .AppendLine($"Defense: {AdventurClass[i].defense}");
+            str.AppendLine($"\n[1] {AdventurerClassName[i].adventurerClass}")
+            .AppendLine($"Hp: {AdventurerClassName[i].playerHp}")
+            .AppendLine($"Mp: {AdventurerClassName[i].playerMp}")
+            .AppendLine($"Physical Attack: {AdventurerClassName[i].physicalAttack}")
+            .AppendLine($"Magic Attack: {AdventurerClassName[i].magicAttack}")
+            .AppendLine($"Defense: {AdventurerClassName[i].defense}");
         }
         Console.WriteLine(str.ToString());
     }

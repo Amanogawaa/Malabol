@@ -13,10 +13,7 @@ namespace newgame
     {
         static void Main(string[] args)
         {
-            // Game.GameStart();
-            PLayerCustomization.MainMenu();
-            PLayerCustomization.CharacterCreation();
-            PLayerCustomization.GenderPick();
+            Game.GameStart();
         }
     }
 
