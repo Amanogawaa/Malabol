@@ -1,10 +1,9 @@
 namespace newgame;
 public class Player
 {
-    public string? playerName = "";
-    public string? playerGender = "";
+    private string? playerName = "";
+    private string? playerGender = "";
     public bool isPlayer = false;
-    public bool isBad = false;
     public static List<Player> players = new List<Player>();
     public static List<Player> randomNames = new List<Player>();
 
