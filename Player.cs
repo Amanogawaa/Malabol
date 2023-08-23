@@ -1,5 +1,5 @@
 namespace newgame;
-public class Player
+public struct Player
 {
     private string? playerName = "";
     private string? playerGender = "";

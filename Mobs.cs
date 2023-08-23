@@ -26,13 +26,4 @@ public class Mobs
         new Mobs("Sandeep", 250, 50),
         new Mobs("Waste Pillager", 250, 50),
     };
-
-    public static void PrintEnemy()
-    {
-        Console.WriteLine("Enemy List");
-        foreach (var enemy in levelOne)
-        {
-            Console.WriteLine(enemy.mobName);
-        }
-    }
 }

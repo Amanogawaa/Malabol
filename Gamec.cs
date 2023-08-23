@@ -7,6 +7,5 @@ public class Game
     public static void GameStart()
     {
         PlayerCreation.MainMenu();
-        Mobs.PrintEnemy();
     }
 }

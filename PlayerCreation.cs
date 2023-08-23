@@ -1,4 +1,3 @@
-
 namespace newgame;
 
 public class PlayerCreation
@@ -77,7 +76,7 @@ public class PlayerCreation
         };
 
         bool isValid = false;
-
+        string? genderChoice = "";
         do
         {
             Console.Write("Enter your name: ");
@@ -92,18 +91,26 @@ public class PlayerCreation
             }
 
             Console.WriteLine("Pick a gender");
-            Console.WriteLine("[Male]");
-            Console.WriteLine("[Female]");
-            Console.WriteLine("[Croissant]");
+            Console.WriteLine("[1] Male");
+            Console.WriteLine("[2] Female");
+            Console.WriteLine("[3] Croissant");
             Console.Write(": ");
             string? playerGender = Console.ReadLine();
             if (notAGender.Contains(playerGender, StringComparer.OrdinalIgnoreCase))
             {
                 Console.WriteLine("That's not a gender dumbass!");
+                isValid = false;
             }
-            else
+            if (int.TryParse(playerGender, out int choice))
             {
-                Console.WriteLine("Understood!");
+                genderChoice = choice switch
+                {
+                    1 => "Male",
+                    2 => "Female",
+                    3 => "Croissant",
+                    _ => "Please try again"
+                };
+
             }
 
             AdventurerClass.PrintStats();
@@ -116,7 +123,7 @@ public class PlayerCreation
                 if (playerName != null && playerGender != null)
                 {
                     Console.WriteLine($"Name: {playerName.ToUpper()}");
-                    Console.WriteLine($"Name: {playerGender.ToUpper()}");
+                    Console.WriteLine($"Gender: {genderChoice}");
                     Console.WriteLine($"Class: {player.adventurerClass}");
                     Console.WriteLine($"Health: {player.playerHp}");
                     Console.WriteLine($"Defense: {player.defense}");
@@ -129,8 +136,6 @@ public class PlayerCreation
         }
         while (!isValid);
     }
-
-
 }
 
 

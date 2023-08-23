@@ -1,7 +1,7 @@
 using System.Text;
 
 namespace newgame;
-public class AdventurerClass
+public struct AdventurerClass
 {
     public string? adventurerClass;
     public int playerHp;
@@ -36,11 +36,10 @@ public class AdventurerClass
     public static void PrintStats()
     {
         StringBuilder str = new StringBuilder();
-        str.AppendLine("-----------------------------------------------------");
-
         for (int i = 0; i < AdventurerClassName.Count; i++)
         {
-            str.AppendLine($"\n[1] {AdventurerClassName[i].adventurerClass}")
+            str.Append("-----------------------------------------------------")
+            .AppendLine($"\n[1] {AdventurerClassName[i].adventurerClass}")
             .AppendLine($"Hp: {AdventurerClassName[i].playerHp}")
             .AppendLine($"Mp: {AdventurerClassName[i].playerMp}")
             .AppendLine($"Physical Attack: {AdventurerClassName[i].physicalAttack}")
