@@ -1,8 +1,10 @@
+using System.Text;
+
 namespace newgame;
 
 public class PlayerCreation
 {
-    public List<Player> currentPlayers = new List<Player>();
+    public static List<Player> createdPlayers = new List<Player>();
     // Main Menu
     public static void MainMenu()
     {
@@ -76,11 +78,12 @@ public class PlayerCreation
         };
 
         bool isValid = false;
+        string? playerName = "";
         string? genderChoice = "";
         do
         {
             Console.Write("Enter your name: ");
-            string? playerName = Console.ReadLine();
+            playerName = Console.ReadLine();
             if (InappropriateNames.Contains(playerName, StringComparer.OrdinalIgnoreCase))
             {
                 Console.WriteLine("Sorry, the name is inappropriate, please try again");
@@ -112,27 +115,29 @@ public class PlayerCreation
                 };
 
             }
-
+            //-----------------------------------------------------------------------------------------------
             AdventurerClass.PrintStats();
             Console.Write("Choose a class: ");
             string? user = Console.ReadLine();
 
-            if (int.TryParse(user, out int chosenClass) && chosenClass >= 1 && chosenClass <= AdventurerClass.AdventurerClassName.Count)
+            if (int.TryParse(user, out int chosenClass) && chosenClass >= 1 && chosenClass <= AdventurerClass.AdventurerClassList.Count)
             {
-                AdventurerClass player = AdventurerClass.AdventurerClassName[chosenClass - 1];
-                if (playerName != null && playerGender != null)
-                {
-                    Console.WriteLine($"Name: {playerName.ToUpper()}");
-                    Console.WriteLine($"Gender: {genderChoice}");
-                    Console.WriteLine($"Class: {player.adventurerClass}");
-                    Console.WriteLine($"Health: {player.playerHp}");
-                    Console.WriteLine($"Defense: {player.defense}");
-                    Console.WriteLine($"Mana: {player.playerMp}");
-                    Console.WriteLine($"Physical Damage: {player.physicalAttack}");
-                    Console.WriteLine($"Magic Damage: {player.magicAttack}");
-                }
+
+                AdventurerClass? yourClass = AdventurerClass.AdventurerClassList[chosenClass - 1];
+                Player newPlayer = new Player(playerName, playerGender, true, yourClass.classHp, yourClass.classMp, yourClass.physicalAttack, yourClass.magicAttack, yourClass.defense);
+                newPlayer.playerClass = yourClass;
+                createdPlayers.Add(newPlayer);
+                Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine($"Name: {playerName?.ToUpper() ?? "UNKNOWN"}");
+                Console.WriteLine($"Gender: {genderChoice}");
+                Console.WriteLine($"Class: {newPlayer.playerClass.className}");
+                Console.WriteLine($"Health: {newPlayer.playerHp}");
+                Console.WriteLine($"Defense: {newPlayer.defense}");
+                Console.WriteLine($"Mana: {newPlayer.playerMp}");
+                Console.WriteLine($"Physical Damage: {newPlayer.physicalAttack}");
+                Console.WriteLine($"Magic Damage: {newPlayer.magicAttack}");
+                Console.WriteLine("--------------------------------------------------");
             }
-            Player currentPlayer = new Player(playerName, playerGender, true);
         }
         while (!isValid);
     }

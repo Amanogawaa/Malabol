@@ -1,50 +1,58 @@
 using System.Text;
 
 namespace newgame;
-public struct AdventurerClass
+public class AdventurerClass
 {
-    public string? adventurerClass;
-    public int playerHp;
-    public int playerMp;
+    public string? className;
+    public int classHp;
+    public int classMp;
     public int physicalAttack;
     public int magicAttack;
     public int defense;
 
-    public AdventurerClass(string adventurerClass, int playerHp, int playerMp, int physicalAttack, int magicAttack, int defense)
+    public static List<AdventurerClass> AdventurerClassList = new List<AdventurerClass>();
+    public AdventurerClass(string classname, int classhp, int classmp, int physicalAttack, int magicAttack, int defense)
     {
-        this.adventurerClass = adventurerClass;
-        this.playerHp = playerHp;
-        this.playerMp = playerMp;
+        this.className = classname;
+        this.classHp = classhp;
+        this.classMp = classmp;
         this.physicalAttack = physicalAttack;
         this.magicAttack = magicAttack;
         this.defense = defense;
+        AdventurerClassList.Add(this);
     }
 
     //Human, Elf, Half Elf, Dhan, Giant, Dark Elf, Dekan, Trinity
-    public static List<AdventurerClass> AdventurerClassName = new List<AdventurerClass>
-    {
-        new AdventurerClass("Human", 100, 50, 20, 10, 15),
-        new AdventurerClass("Elf", 80, 100, 15, 20, 10),
-        new AdventurerClass("Half Elf", 90, 80, 18, 18, 12),
-        new AdventurerClass("Dhan", 110, 40, 25, 5, 20),
-        new AdventurerClass("Giant", 150, 20, 30, 2, 25),
-        new AdventurerClass("Dark Elf", 85, 110, 17, 22, 8),
-        new AdventurerClass("Dekan", 120, 60, 22, 8, 18),
-        new AdventurerClass("Trinity", 95, 95, 19, 19, 14)
-    };
 
+    public static AdventurerClass Human = new AdventurerClass("Human", 100, 50, 20, 10, 15);
+    public static AdventurerClass Elf = new AdventurerClass("Elf", 80, 100, 15, 20, 10);
+    public static AdventurerClass HalfElf = new AdventurerClass("Half Elf", 90, 80, 18, 18, 12);
+    public static AdventurerClass Dhan = new AdventurerClass("Dhan", 110, 40, 25, 5, 20);
+    public static AdventurerClass Giant = new AdventurerClass("Giant", 150, 20, 30, 2, 25);
+    public static AdventurerClass DarkElf = new AdventurerClass("Dark Elf", 85, 110, 17, 22, 8);
+    public static AdventurerClass Dekan = new AdventurerClass("Dekan", 120, 60, 22, 8, 18);
+    public static AdventurerClass Trinity = new AdventurerClass("Trinity", 95, 95, 19, 19, 14);
+
+
+    public static void PrintClass()
+    {
+        foreach (var item in AdventurerClassList)
+        {
+            Console.WriteLine(item.className);
+        }
+    }
     public static void PrintStats()
     {
         StringBuilder str = new StringBuilder();
-        for (int i = 0; i < AdventurerClassName.Count; i++)
+        for (int i = 0; i < AdventurerClassList.Count; i++)
         {
             str.Append("-----------------------------------------------------")
-            .AppendLine($"\n[1] {AdventurerClassName[i].adventurerClass}")
-            .AppendLine($"Hp: {AdventurerClassName[i].playerHp}")
-            .AppendLine($"Mp: {AdventurerClassName[i].playerMp}")
-            .AppendLine($"Physical Attack: {AdventurerClassName[i].physicalAttack}")
-            .AppendLine($"Magic Attack: {AdventurerClassName[i].magicAttack}")
-            .AppendLine($"Defense: {AdventurerClassName[i].defense}");
+            .AppendLine($"\n[{i + 1}] {AdventurerClassList[i].className}")
+            .AppendLine($"Hp: {AdventurerClassList[i].classHp}")
+            .AppendLine($"Mp: {AdventurerClassList[i].classMp}")
+            .AppendLine($"Physical Attack: {AdventurerClassList[i].physicalAttack}")
+            .AppendLine($"Magic Attack: {AdventurerClassList[i].magicAttack}")
+            .AppendLine($"Defense: {AdventurerClassList[i].defense}");
         }
         Console.WriteLine(str.ToString());
     }
