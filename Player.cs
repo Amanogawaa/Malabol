@@ -32,4 +32,12 @@ public class Player
             Console.WriteLine("Player Added!");
         }
     }
+
+
+    public void PlayerAttack(Mobs target)
+    {
+        int damageDealt = BattleSystem.playerOnMove[0].physicalAttack;
+        target.mobHp -= damageDealt;
+        Console.Write($"{BattleSystem.playerOnMove[0].playerName} damage the enemy!");
+    }
 }
