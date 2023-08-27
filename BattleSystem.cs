@@ -12,51 +12,63 @@ public class BattleSystem
 
         playerOnMove.Add(PlayerCreation.createdPlayers[0]);
 
-        int selectMobs = random.Next(0, Mobs.LevelOne.Count);
+        int selectMobs = random.Next(0, Mobs.LevelOne.Count - 1);
         mobOnMove.Add(Mobs.LevelOne[selectMobs]);
         Console.WriteLine($"Selected Mob: {Mobs.LevelOne[selectMobs].mobName}");
+        Console.WriteLine("Battle Start!");
+        Console.ReadLine();
 
-        BattleLoop();
-    }
-
-    public static void BattleLoop()
-    {
-        while (true)
+        bool onGoing = true;
+        while (onGoing)
         {
-            PlayerTurn();
-        }
-    }
+            Console.WriteLine($"A wild {mobOnMove[0].mobName} has appear");
+            Console.WriteLine("What will you do?");
+            Console.WriteLine("[1] Attack");
+            Console.WriteLine("[2] Run");
+            int user = Convert.ToInt32(Console.ReadLine());
 
-    public static void PlayerTurn()
-    {
-        if (mobOnMove[0].mobHp <= 0)
-        {
-            Console.WriteLine($"{mobOnMove[0].mobName} defeated!");
-            mobOnMove.RemoveAt(0);
-            if (mobOnMove.Count == 0)
+            switch (user)
             {
-                Console.WriteLine("Congratulations! You have won the battle!");
+                case 1:
+                    int playerDamage = playerOnMove[0].physicalAttack;
+                    mobOnMove[0].mobHp -= playerDamage;
+                    Console.WriteLine($"You dealt {playerDamage} damage to {mobOnMove[0].mobName}");
+                    break;
+                case 2:
+                    // Implement player's defend action
+                    Console.WriteLine("You chose to defend.");
+                    break;
+                case 3:
+                    // Implement player's run action
+                    Console.WriteLine("You chose to run.");
+                    onGoing = false;
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Choose again.");
+                    break;
+            }
 
+            if (mobOnMove[0].mobHp <= 0)
+            {
+                Console.WriteLine($"Congratulations! You defeated {mobOnMove[0].mobName}");
+                onGoing = false;
+            }
+
+            if (onGoing)
+            {
+                mobOnMove[0].MobAttack(playerOnMove[0]);
+
+                if (playerOnMove[0].playerHp <= 0)
+                {
+                    Console.WriteLine("Oh no! You have been defeated.");
+                    onGoing = false;
+                }
             }
         }
-        else
-        {
-            MobTurn();
-        }
-    }
-
-    public static void MobTurn()
-    {
-
-        if (playerOnMove[0].playerHp <= 0)
-        {
-            Console.WriteLine($"{playerOnMove[0].playerName} has been defeated!");
-            // Implement game over logic here
-        }
-        else
-        {
-            PlayerTurn();
-        }
+        Console.WriteLine("Battle is over.");
     }
 }
+
+
+
 
