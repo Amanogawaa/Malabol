@@ -15,15 +15,15 @@ public class Player
 
     public static List<Player> players = new List<Player>();
 
-    public Player(string? playerName, string? playerGender, bool isPlayer, int? hp, int mp, int phatk, int matk, int def)
+    public Player(string? playerName, string? playerGender, bool isPlayer, int? hp, int mp, int physicalAttack, int magicAttack, int def)
     {
         this.playerName = playerName;
         this.playerGender = playerGender;
         this.isPlayer = isPlayer;
         this.playerHp = hp;
         this.playerMp = mp;
-        this.physicalAttack = phatk;
-        this.magicAttack = matk;
+        this.physicalAttack = physicalAttack;
+        this.magicAttack = magicAttack;
         this.defense = def;
 
         if (isPlayer == true)
