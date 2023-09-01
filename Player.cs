@@ -40,7 +40,7 @@ public class Player
 
         if (target.mobHp > 0)
         {
-            damage = this.physicalAttack - target.mobHp;
+            damage = BattleSystem.playerOnMove[0].physicalAttack;
             target.mobHp -= damage;
             Console.WriteLine($"{this.playerName} attacked {target.mobName} for {damage} damage!");
         }

@@ -1,3 +1,5 @@
+using System.Diagnostics.Contracts;
+
 namespace newgame;
 
 public class Skill
@@ -52,4 +54,47 @@ public class Skill
     public static Skill MareasAnger = new Skill("Mareas Anger", 10, 1);
     //-----------------------------------------------------------------------------------------------------
 
+    //giant skills
+    public static Skill PolearmMastery = new Skill("Polearm Mastery", 10, 1);
+    public static Skill CriminalMind = new Skill("Criminal Mind", 10, 1);
+    public static Skill SnareAxe = new Skill("Snare Axe", 10, 1);
+    public static Skill Berserk = new Skill("Berserk", 10, 1);
+    public static Skill Fortunate = new Skill("Fortunate", 10, 1);
+    public static Skill RootingAxe = new Skill("Rooting Axe", 10, 1);
+    public static Skill Sweep = new Skill("Sweep", 10, 1);
+    public static Skill Vigilance = new Skill("Vigilance", 10, 1);
+    public static Skill Precision = new Skill("Precision", 10, 1);
+    public static Skill Jolt = new Skill("Jolt", 10, 1);
+    public static Skill WildBlood = new Skill("Wild Blood", 10, 1);
+    public static Skill LowBlow = new Skill("Low Blow", 10, 1);
+    public static Skill Cleave = new Skill("Cleave", 10, 1);
+    public static Skill CallToBattle = new Skill("Call to Battle", 10, 1);
+    public static Skill PremiumStrike = new Skill("Premium Strike", 10, 1);
+    public static Skill MagnitudeSwing = new Skill("Magnitude Swing", 10, 1);
+    public static Skill Retaliate = new Skill("Retaliate", 10, 1);
+    public static Skill IceWillyWilly = new Skill("Ice Willywilly", 10, 1);
+    //-----------------------------------------------------------------------------------------------------
+
+    //half elf skills
+    public static Skill Blazing = new Skill("Blazing", 10, 1);
+    public static Skill Frozen = new Skill("Frozen", 10, 1);
+    public static Skill Darkness = new Skill("Darkness", 10, 1);
+    public static Skill Divinity = new Skill("Divinity", 10, 1);
+    public static Skill PsychicShot = new Skill("Psychic Shot", 10, 1);
+    public static Skill LongShot = new Skill("Long Shot", 10, 1);
+    public static Skill EnchantedArrow = new Skill("Enchanted Arrow", 10, 1);
+    public static Skill FaintPierce = new Skill("Faint Pierce", 10, 1);
+    public static Skill BleedingShot = new Skill("Bleeding Shot", 10, 1);
+    public static Skill Agility = new Skill("Agility", 10, 1);
+    public static Skill BrandishKick = new Skill("Brandish Kick", 10, 1);
+    public static Skill Ensnare = new Skill("Ensnare", 10, 1);
+    public static Skill FeebleArrow = new Skill("Feeble Arrow", 10, 1);
+    public static Skill Fatal = new Skill("Fatal", 10, 1);
+    public static Skill Sprint = new Skill("Sprint", 10, 1);
+    public static Skill Evade = new Skill("Evade", 10, 1);
+    public static Skill PiercingRoot = new Skill("Piercing Root", 10, 1);
+    public static Skill DoubleStrike = new Skill("Double Strike", 10, 1);
+    //-----------------------------------------------------------------------------------------------------
+
+    //dhan skills
 }

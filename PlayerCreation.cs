@@ -132,10 +132,11 @@ public class PlayerCreation
                 Console.WriteLine($"Gender: {genderChoice}");
                 Console.WriteLine($"Class: {newPlayer.playerClass.className}");
                 Console.WriteLine($"Health: {newPlayer.playerHp}");
-                Console.WriteLine($"Defense: {newPlayer.defense}");
                 Console.WriteLine($"Mana: {newPlayer.playerMp}");
+                Console.WriteLine($"Defense: {newPlayer.defense}");
                 Console.WriteLine($"Physical Damage: {newPlayer.physicalAttack}");
                 Console.WriteLine($"Magic Damage: {newPlayer.magicAttack}");
+                AdventurerClass.PrintSkill();
                 Console.WriteLine("--------------------------------------------------");
             }
         }

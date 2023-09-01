@@ -30,9 +30,7 @@ public class BattleSystem
             switch (user)
             {
                 case 1:
-                    int playerDamage = playerOnMove[0].physicalAttack;
-                    mobOnMove[0].mobHp -= playerDamage;
-                    Console.WriteLine($"You dealt {playerDamage} damage to {mobOnMove[0].mobName}");
+                    playerOnMove[0].PlayerAttack(mobOnMove[0]);
                     break;
                 case 2:
                     // Implement player's defend action

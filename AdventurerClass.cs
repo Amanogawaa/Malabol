@@ -42,9 +42,25 @@ public class AdventurerClass
             Skill.WhiteCurse
         }
     };
-    public static AdventurerClass HalfElf = new AdventurerClass("Half Elf", 498, 197, 24, 18, 12);
+    public static AdventurerClass Giant = new AdventurerClass("Giant", 498, 197, 25, 2, 25)
+    {
+        skills =
+        {
+            Skill.PolearmMastery, Skill.CriminalMind, Skill.SnareAxe, Skill.Berserk, Skill.Fortunate, Skill.RootingAxe, Skill.Sweep, Skill.Vigilance,
+            Skill.Precision, Skill.Jolt, Skill.WildBlood, Skill.LowBlow, Skill.Cleave, Skill.CallToBattle, Skill.PremiumStrike, Skill.MagnitudeSwing,
+            Skill.Retaliate, Skill.IceWillyWilly
+        }
+    };
+    public static AdventurerClass HalfElf = new AdventurerClass("Half Elf", 498, 197, 24, 18, 12)
+    {
+        skills =
+        {
+            Skill.Blazing, Skill.Frozen, Skill.Darkness, Skill.Divinity, Skill.PsychicShot, Skill.LongShot, Skill.EnchantedArrow, Skill.FaintPierce,
+            Skill.BleedingShot, Skill.Agility, Skill.BrandishKick, Skill.Ensnare, Skill.FeebleArrow, Skill.Fatal, Skill.Sprint, Skill.Evade, Skill.PiercingRoot,
+            Skill.DoubleStrike
+        }
+    };
     public static AdventurerClass Dhan = new AdventurerClass("Dhan", 498, 197, 25, 5, 20);
-    public static AdventurerClass Giant = new AdventurerClass("Giant", 498, 197, 25, 2, 25);
     public static AdventurerClass DarkElf = new AdventurerClass("Dark Elf", 498, 197, 23, 22, 8);
     public static AdventurerClass Dekan = new AdventurerClass("Dekan", 498, 197, 22, 8, 18);
     public static AdventurerClass Trinity = new AdventurerClass("Trinity", 498, 197, 24, 19, 14);
@@ -72,5 +88,13 @@ public class AdventurerClass
             .AppendLine($"Defense: {AdventurerClassList[i].defense}");
         }
         Console.WriteLine(str.ToString());
+    }
+
+    public static void PrintSkill()
+    {
+        foreach (var skill in AdventurerClassList[0].skills)
+        {
+            Console.WriteLine(skill.skillName);
+        }
     }
 }
