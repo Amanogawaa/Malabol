@@ -36,8 +36,17 @@ public class Player
 
     public void PlayerAttack(Mobs target)
     {
-        int damageDealt = BattleSystem.playerOnMove[0].physicalAttack;
-        target.mobHp -= damageDealt;
-        Console.Write($"{BattleSystem.playerOnMove[0].playerName} damage the enemy!");
+        int damage = 0;
+
+        if (target.mobHp > 0)
+        {
+            damage = this.physicalAttack - target.mobHp;
+            target.mobHp -= damage;
+            Console.WriteLine($"{this.playerName} attacked {target.mobName} for {damage} damage!");
+        }
+        else
+        {
+            Console.WriteLine($"{target.mobName} is already dead!");
+        }
     }
 }

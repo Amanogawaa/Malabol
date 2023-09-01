@@ -9,7 +9,7 @@ public class AdventurerClass
     public int physicalAttack;
     public int magicAttack;
     public int defense;
-
+    public List<Skill> skills = new List<Skill>();
     public static List<AdventurerClass> AdventurerClassList = new List<AdventurerClass>();
     public AdventurerClass(string classname, int classhp, int classmp, int physicalAttack, int magicAttack, int defense)
     {
@@ -24,14 +24,31 @@ public class AdventurerClass
 
     //Human, Elf, Half Elf, Dhan, Giant, Dark Elf, Dekan, Trinity
 
-    public static AdventurerClass Human = new AdventurerClass("Human", 100, 50, 20, 10, 15);
-    public static AdventurerClass Elf = new AdventurerClass("Elf", 80, 100, 15, 20, 10);
-    public static AdventurerClass HalfElf = new AdventurerClass("Half Elf", 90, 80, 18, 18, 12);
-    public static AdventurerClass Dhan = new AdventurerClass("Dhan", 110, 40, 25, 5, 20);
-    public static AdventurerClass Giant = new AdventurerClass("Giant", 150, 20, 30, 2, 25);
-    public static AdventurerClass DarkElf = new AdventurerClass("Dark Elf", 85, 110, 17, 22, 8);
-    public static AdventurerClass Dekan = new AdventurerClass("Dekan", 120, 60, 22, 8, 18);
-    public static AdventurerClass Trinity = new AdventurerClass("Trinity", 95, 95, 19, 19, 14);
+    public static AdventurerClass Human = new AdventurerClass("Human", 498, 197, 24, 10, 15)
+    {
+        skills =
+        {
+            Skill.AimedBlow, Skill.BlueDrain, Skill.CrazyStrength, Skill.CrazySwing, Skill.CriticalAura, Skill.HeavyWeapon, Skill.KnightSymbol,
+            Skill.OrderSwing, Skill.OrderSwing, Skill.PhysicalBlow, Skill.RohasBlessing, Skill.Rush, Skill.StoneSkin, Skill.StraightRepulse,
+            Skill.StraightRepulse, Skill.SwordandDaggerMastery, Skill.TauntRoar, Skill.WarCry
+        }
+    };
+    public static AdventurerClass Elf = new AdventurerClass("Elf", 498, 197, 24, 20, 10)
+    {
+        skills =
+        {
+            Skill.BluntMastery, Skill.BlueFountain, Skill.Erase, Skill.Euphoria, Skill.FinalAttempt, Skill.GrayMask, Skill.GroupEuphoria,
+            Skill.Incarnation, Skill.MagicalBlow, Skill.ManaShield, Skill.MareasAnger, Skill.MareasHammer, Skill.Reflection, Skill.Vanishment,
+            Skill.WhiteCurse
+        }
+    };
+    public static AdventurerClass HalfElf = new AdventurerClass("Half Elf", 498, 197, 24, 18, 12);
+    public static AdventurerClass Dhan = new AdventurerClass("Dhan", 498, 197, 25, 5, 20);
+    public static AdventurerClass Giant = new AdventurerClass("Giant", 498, 197, 25, 2, 25);
+    public static AdventurerClass DarkElf = new AdventurerClass("Dark Elf", 498, 197, 23, 22, 8);
+    public static AdventurerClass Dekan = new AdventurerClass("Dekan", 498, 197, 22, 8, 18);
+    public static AdventurerClass Trinity = new AdventurerClass("Trinity", 498, 197, 24, 19, 14);
+    public static AdventurerClass Aesir = new AdventurerClass("Aesir", 498, 197, 25, 20, 15);
 
 
     public static void PrintClass()

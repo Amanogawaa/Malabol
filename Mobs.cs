@@ -30,6 +30,6 @@ public class Mobs
     public void MobAttack(Player player)
     {
         player.playerHp -= mobAttackDamage;
-        Console.WriteLine($"{this.mobName} attacked {player.playerName}!");
+        Console.WriteLine($"{this.mobName} attacked {player.playerName}! and dealt {mobAttackDamage} damage!");
     }
 }
