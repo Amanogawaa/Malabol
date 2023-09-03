@@ -161,5 +161,22 @@ public class Skill
     public static Skill DragonNail = new Skill("Dragon Nail", 10, 1);
     //-----------------------------------------------------------------------------------------------------
 
-    //    
+    //Trinity
+    public static Skill ArrendalMastery = new Skill("Arrendal Mastery", 10, 1);
+    public static Skill WoundOfRestriction = new Skill("Wound of Restriction", 10, 1);
+    public static Skill TrinityForce = new Skill("Trinity Force", 10, 1);
+    public static Skill ThornsWhip = new Skill("Thorns Whip", 10, 1);
+    public static Skill PhantomSpirit = new Skill("Phantom Spirit", 10, 1);
+    public static Skill PenetratingDarkness = new Skill("Penetrating Darkness", 10, 1);
+    public static Skill DarkAssimilation = new Skill("Dark Assimilation", 10, 1);
+    public static Skill DistortionClawDimension = new Skill("Distortion Claw - Dimension", 10, 1);
+    public static Skill WindyChain = new Skill("Windy Chain", 10, 1);
+    public static Skill SpiritConcentration = new Skill("Spirit Concentration", 10, 1);
+    public static Skill DistortionClawReverse = new Skill("Distortion Claw - Reverse", 10, 1);
+    public static Skill ThunderStroke = new Skill("Thunderstroke", 10, 1);
+    public static Skill RearBlast = new Skill("Rear Blast", 10, 1);
+    public static Skill DistortionClawOblivion = new Skill("Distortion Claw - Oblivion", 10, 1);
+    public static Skill Airburst = new Skill("Airburst", 10, 1);
+    public static Skill DistortionClawGravity = new Skill("Distortion Claw - Gravity", 10, 1);
+    public static Skill DimensionalCoat = new Skill("Dimensional Coat", 10, 1);
 }

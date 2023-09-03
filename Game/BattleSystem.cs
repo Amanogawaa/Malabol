@@ -5,19 +5,17 @@ public class BattleSystem
     public static List<Player> playerOnMove = new List<Player>();
     public static List<Mobs> mobOnMove = new List<Mobs>();
 
-
     public static void BattleStart()
     {
         Random random = new Random();
 
         playerOnMove.Add(PlayerCreation.createdPlayers[0]);
-
+        Menu.UI();
         int selectMobs = random.Next(0, Mobs.LevelOne.Count - 1);
         mobOnMove.Add(Mobs.LevelOne[selectMobs]);
         Console.WriteLine($"Selected Mob: {Mobs.LevelOne[selectMobs].mobName}");
         Console.WriteLine("Battle Start!");
         Console.ReadLine();
-
         bool onGoing = true;
         while (onGoing)
         {

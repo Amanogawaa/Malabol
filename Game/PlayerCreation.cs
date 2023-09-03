@@ -97,6 +97,7 @@ public class PlayerCreation
             Console.WriteLine("[1] Male");
             Console.WriteLine("[2] Female");
             Console.WriteLine("[3] Croissant");
+            Console.WriteLine("[4] Walmart Bag");
             Console.Write(": ");
             string? playerGender = Console.ReadLine();
             if (notAGender.Contains(playerGender, StringComparer.OrdinalIgnoreCase))
@@ -111,6 +112,7 @@ public class PlayerCreation
                     1 => "Male",
                     2 => "Female",
                     3 => "Croissant",
+                    4 => "Walmart Bag",
                     _ => "Please try again"
                 };
 
@@ -126,6 +128,8 @@ public class PlayerCreation
                 Player newPlayer = new Player(playerName, playerGender, true, yourClass.classHp, yourClass.classMp, yourClass.physicalAttack, yourClass.magicAttack, yourClass.defense);
                 newPlayer.playerClass = yourClass;
                 Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine("----Player Stats----");
+                Console.WriteLine("--------------------------------------------------");
                 Console.WriteLine($"Name: {playerName?.ToUpper() ?? "UNKNOWN"}");
                 Console.WriteLine($"Gender: {genderChoice}");
                 Console.WriteLine($"Class: {newPlayer.playerClass.className}");
@@ -134,12 +138,10 @@ public class PlayerCreation
                 Console.WriteLine($"Defense: {newPlayer.defense}");
                 Console.WriteLine($"Physical Damage: {newPlayer.physicalAttack}");
                 Console.WriteLine($"Magic Damage: {newPlayer.magicAttack}");
-                Console.WriteLine("Skills:");
-                int count = 1;
+                Console.WriteLine("--------------------------------------------------");
                 foreach (var skill in newPlayer.playerClass.skills)
                 {
-                    Console.WriteLine($"{count}: {skill.skillName}");
-                    count++;
+                    Console.WriteLine($"Skill Name:{skill.skillName}");
                 }
                 createdPlayers.Add(newPlayer);
                 Console.WriteLine("--------------------------------------------------");

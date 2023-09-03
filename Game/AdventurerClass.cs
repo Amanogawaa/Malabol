@@ -87,8 +87,15 @@ public class AdventurerClass
             Skill.Lunacy, Skill.DragonNail
         }
     };
-    public static AdventurerClass Trinity = new AdventurerClass("Trinity", 498, 197, 24, 19, 14);
-    public static AdventurerClass Aesir = new AdventurerClass("Aesir", 498, 197, 25, 20, 15);
+    public static AdventurerClass Trinity = new AdventurerClass("Trinity", 498, 197, 24, 19, 14)
+    {
+        skills =
+        {
+            Skill.ArrendalMastery, Skill.WoundOfRestriction, Skill.TrinityForce, Skill.ThornsWhip, Skill.PhantomSpirit, Skill.PenetratingDarkness, Skill.DarkAssimilation,
+            Skill.DistortionClawDimension, Skill.WindyChain, Skill.SpiritConcentration, Skill.DistortionClawReverse, Skill.ThunderStroke, Skill.RearBlast, Skill.DistortionClawOblivion,
+            Skill.Airburst, Skill.DistortionClawGravity, Skill.DimensionalCoat
+        }
+    };
 
 
     public static void PrintClass()

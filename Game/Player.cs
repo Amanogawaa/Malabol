@@ -29,7 +29,7 @@ public class Player
         if (isPlayer == true)
         {
             players.Add(this);
-            Console.WriteLine("Player Added!");
+            Console.WriteLine("Player Created");
             Console.ReadLine();
             Console.Clear();
         }
