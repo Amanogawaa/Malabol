@@ -69,7 +69,15 @@ public class AdventurerClass
             Skill.PremiumSlash, Skill.RoyalMask, Skill.ExperienceMambo, Skill.Demolition, Skill.BlackMantle
         }
     };
-    public static AdventurerClass DarkElf = new AdventurerClass("Dark Elf", 498, 197, 23, 22, 8);
+    public static AdventurerClass DarkElf = new AdventurerClass("Dark Elf", 498, 197, 23, 22, 8)
+    {
+        skills =
+        {
+            Skill.StaffMastery, Skill.AddTempter, Skill.PsycheShield, Skill.ImperviousShield, Skill.Reveal, Skill.MagicPiercing, Skill.CountBlow,
+            Skill.Weakness, Skill.MultiMagicArrow, Skill.GroupMortalImmune, Skill.AreaSpell, Skill.RingBurst, Skill.MirrorBurst, Skill.StrikeBash,
+            Skill.KillingTime, Skill.EternalDarkness, Skill.Reraise, Skill.Destroy
+        }
+    };
     public static AdventurerClass Dekan = new AdventurerClass("Dekan", 498, 197, 22, 8, 18);
     public static AdventurerClass Trinity = new AdventurerClass("Trinity", 498, 197, 24, 19, 14);
     public static AdventurerClass Aesir = new AdventurerClass("Aesir", 498, 197, 25, 20, 15);

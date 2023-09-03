@@ -116,4 +116,29 @@ public class Skill
     public static Skill ExperienceMambo = new Skill("Experience Mambo", 10, 1);
     public static Skill Demolition = new Skill("Demolition", 10, 1);
     public static Skill BlackMantle = new Skill("Black Mantle", 10, 1);
+    //-----------------------------------------------------------------------------------------------------
+
+    //darkelf skills
+    public static Skill StaffMastery = new Skill("Staff Mastery", 10, 1);
+    public static Skill AddTempter = new Skill("Add Temper", 10, 1);
+    public static Skill PsycheShield = new Skill("PsycheShield", 10, 1);
+    public static Skill ImperviousShield = new Skill("Impervious Shield", 10, 1);
+    public static Skill Reveal = new Skill("Reveal", 10, 1);
+    public static Skill MagicPiercing = new Skill("Magic Piercing", 10, 1);
+    public static Skill CountBlow = new Skill("Count Blow", 10, 1);
+    public static Skill Weakness = new Skill("Weakness", 10, 1);
+    public static Skill MultiMagicArrow = new Skill("Multi Magic Arrow", 10, 1);
+    public static Skill GroupMortalImmune = new Skill("Group Moral Immune", 10, 1);
+    public static Skill AreaSpell = new Skill("Area Spell", 10, 1);
+    public static Skill RingBurst = new Skill("Ring Burst", 10, 1);
+    public static Skill MirrorBurst = new Skill("Mirror Burst", 10, 1);
+    public static Skill StrikeBash = new Skill("Strike Bash", 10, 1);
+    public static Skill KillingTime = new Skill("Killing Time", 10, 1);
+    public static Skill EternalDarkness = new Skill("Eternal Darkness", 10, 1);
+    public static Skill Reraise = new Skill("Reraise", 10, 1);
+    public static Skill EraseAbility = new Skill("Erase Ability", 10, 1);
+    public static Skill Destroy = new Skill("Destroy", 10, 1);
+    //-----------------------------------------------------------------------------------------------------
+
+    //Dekan
 }
