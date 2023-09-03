@@ -30,6 +30,8 @@ public class Player
         {
             players.Add(this);
             Console.WriteLine("Player Added!");
+            Console.ReadLine();
+            Console.Clear();
         }
     }
 

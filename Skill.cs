@@ -141,4 +141,25 @@ public class Skill
     //-----------------------------------------------------------------------------------------------------
 
     //Dekan
+    public static Skill Karma = new Skill("Karma", 10, 1);
+    public static Skill ZhenMastery = new Skill("Zhen Mastery", 10, 1);
+    public static Skill BlueDefense = new Skill("Blue Defense", 10, 1);
+    public static Skill CriticalImmunity = new Skill("Critical Immunity", 10, 1);
+    public static Skill Extricate = new Skill("Extricate", 10, 1);
+    public static Skill Mist = new Skill("Mist", 10, 1);
+    public static Skill Evolve = new Skill("Evolvea", 10, 1);
+    public static Skill Suction = new Skill("Suction", 10, 1);
+    public static Skill ForceLock = new Skill("Force Lock", 10, 1);
+    public static Skill FastShadow = new Skill("Fast Shadow", 10, 1);
+    public static Skill SuddenDeath = new Skill("Sudden Death", 10, 1);
+    public static Skill Penetrate = new Skill("Penetrate", 10, 1);
+    public static Skill SoulDivider = new Skill("Soul Divider", 10, 1);
+    public static Skill BloodyEffect = new Skill("Bloody Effect", 10, 1);
+    public static Skill ToxicPotion = new Skill("Toxic Potion", 10, 1);
+    public static Skill DarkSpell = new Skill("Dark Spell", 10, 1);
+    public static Skill Lunacy = new Skill("Lunacy", 10, 1);
+    public static Skill DragonNail = new Skill("Dragon Nail", 10, 1);
+    //-----------------------------------------------------------------------------------------------------
+
+    //    
 }

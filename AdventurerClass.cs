@@ -78,7 +78,15 @@ public class AdventurerClass
             Skill.KillingTime, Skill.EternalDarkness, Skill.Reraise, Skill.Destroy
         }
     };
-    public static AdventurerClass Dekan = new AdventurerClass("Dekan", 498, 197, 22, 8, 18);
+    public static AdventurerClass Dekan = new AdventurerClass("Dekan", 498, 197, 22, 8, 18)
+    {
+        skills =
+        {
+            Skill.Karma, Skill.ZhenMastery, Skill.BlueDefense, Skill.CriticalImmunity, Skill.Extricate, Skill.Mist, Skill.Evolve, Skill.Suction,
+            Skill.ForceLock, Skill.FastShadow, Skill.SuddenDeath, Skill.Penetrate, Skill.SoulDivider, Skill.BloodyEffect, Skill.ToxicPotion, Skill.DarkSpell,
+            Skill.Lunacy, Skill.DragonNail
+        }
+    };
     public static AdventurerClass Trinity = new AdventurerClass("Trinity", 498, 197, 24, 19, 14);
     public static AdventurerClass Aesir = new AdventurerClass("Aesir", 498, 197, 25, 20, 15);
 
@@ -104,13 +112,5 @@ public class AdventurerClass
             .AppendLine($"Defense: {AdventurerClassList[i].defense}");
         }
         Console.WriteLine(str.ToString());
-    }
-
-    public static void PrintSkill()
-    {
-        foreach (var skill in AdventurerClassList[0].skills)
-        {
-            Console.WriteLine(skill.skillName);
-        }
     }
 }

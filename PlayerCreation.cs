@@ -122,11 +122,9 @@ public class PlayerCreation
 
             if (int.TryParse(user, out int chosenClass) && chosenClass >= 1 && chosenClass <= AdventurerClass.AdventurerClassList.Count)
             {
-
                 AdventurerClass? yourClass = AdventurerClass.AdventurerClassList[chosenClass - 1];
                 Player newPlayer = new Player(playerName, playerGender, true, yourClass.classHp, yourClass.classMp, yourClass.physicalAttack, yourClass.magicAttack, yourClass.defense);
                 newPlayer.playerClass = yourClass;
-                createdPlayers.Add(newPlayer);
                 Console.WriteLine("--------------------------------------------------");
                 Console.WriteLine($"Name: {playerName?.ToUpper() ?? "UNKNOWN"}");
                 Console.WriteLine($"Gender: {genderChoice}");
@@ -136,7 +134,14 @@ public class PlayerCreation
                 Console.WriteLine($"Defense: {newPlayer.defense}");
                 Console.WriteLine($"Physical Damage: {newPlayer.physicalAttack}");
                 Console.WriteLine($"Magic Damage: {newPlayer.magicAttack}");
-                AdventurerClass.PrintSkill();
+                Console.WriteLine("Skills:");
+                int count = 1;
+                foreach (var skill in newPlayer.playerClass.skills)
+                {
+                    Console.WriteLine($"{count}: {skill.skillName}");
+                    count++;
+                }
+                createdPlayers.Add(newPlayer);
                 Console.WriteLine("--------------------------------------------------");
             }
         }
