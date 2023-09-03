@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luna\\development\\c#-learning\\Malabol\\newgame.csproj",
+      "projectUniqueName": "C:\\Users\\Luna\\development\\c#\\Malabol\\newgame.csproj",
       "projectName": "newgame",
-      "projectPath": "C:\\Users\\Luna\\development\\c#-learning\\Malabol\\newgame.csproj",
+      "projectPath": "C:\\Users\\Luna\\development\\c#\\Malabol\\newgame.csproj",
       "packagesPath": "C:\\Users\\Luna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luna\\development\\c#-learning\\Malabol\\obj\\",
+      "outputPath": "C:\\Users\\Luna\\development\\c#\\Malabol\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Luna\\AppData\\Roaming\\NuGet\\NuGet.Config"

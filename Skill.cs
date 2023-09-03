@@ -97,4 +97,23 @@ public class Skill
     //-----------------------------------------------------------------------------------------------------
 
     //dhan skills
+    public static Skill Awareness = new Skill("Awareness", 10, 1);
+    public static Skill SluggsishAttack = new Skill("Sluggish Attack", 10, 1);
+    public static Skill KatarMastery = new Skill("Katar Mastery", 10, 1);
+    public static Skill HideSpirit = new Skill("Hide Spirit", 10, 1);
+    public static Skill Detect = new Skill("Detect", 10, 1);
+    public static Skill TrackingTreasure = new Skill("Tracking Treasure", 10, 1);
+    public static Skill RuinTrap = new Skill("Ruin Trap", 10, 1);
+    public static Skill SealingSquare = new Skill("Sealing Square", 10, 1);
+    public static Skill HealingTrap = new Skill("Healing Trap", 10, 1);
+    public static Skill HeartTrap = new Skill("Heart Trap", 10, 1);
+    public static Skill Scarecrow = new Skill("Scarecrow", 10, 1);
+    public static Skill TimerTrap = new Skill("Timer trap", 10, 1);
+    public static Skill SecretHide = new Skill("Secret Hide", 10, 1);
+    public static Skill Transformation = new Skill("Transformation", 10, 1);
+    public static Skill PremiumSlash = new Skill("Preium Slash", 10, 1);
+    public static Skill RoyalMask = new Skill("Royal Mask", 10, 1);
+    public static Skill ExperienceMambo = new Skill("Experience Mambo", 10, 1);
+    public static Skill Demolition = new Skill("Demolition", 10, 1);
+    public static Skill BlackMantle = new Skill("Black Mantle", 10, 1);
 }

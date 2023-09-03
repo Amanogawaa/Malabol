@@ -60,7 +60,15 @@ public class AdventurerClass
             Skill.DoubleStrike
         }
     };
-    public static AdventurerClass Dhan = new AdventurerClass("Dhan", 498, 197, 25, 5, 20);
+    public static AdventurerClass Dhan = new AdventurerClass("Dhan", 498, 197, 25, 5, 20)
+    {
+        skills =
+        {
+            Skill.Awareness, Skill.SluggsishAttack, Skill.KatarMastery, Skill.HideSpirit, Skill.Detect, Skill.TrackingTreasure, Skill.RuinTrap,
+            Skill.SealingSquare, Skill.HealingTrap, Skill.HeartTrap, Skill.Scarecrow, Skill.TimerTrap, Skill.SecretHide, Skill.Transformation,
+            Skill.PremiumSlash, Skill.RoyalMask, Skill.ExperienceMambo, Skill.Demolition, Skill.BlackMantle
+        }
+    };
     public static AdventurerClass DarkElf = new AdventurerClass("Dark Elf", 498, 197, 23, 22, 8);
     public static AdventurerClass Dekan = new AdventurerClass("Dekan", 498, 197, 22, 8, 18);
     public static AdventurerClass Trinity = new AdventurerClass("Trinity", 498, 197, 24, 19, 14);
