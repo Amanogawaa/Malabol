@@ -10,7 +10,6 @@ public class BattleSystem
         Random random = new Random();
 
         playerOnMove.Add(PlayerCreation.createdPlayers[0]);
-        Menu.UI();
         int selectMobs = random.Next(0, Mobs.LevelOne.Count - 1);
         mobOnMove.Add(Mobs.LevelOne[selectMobs]);
         Console.WriteLine($"Selected Mob: {Mobs.LevelOne[selectMobs].mobName}");

@@ -1,5 +1,3 @@
-using System;
-
 namespace newgame
 {
     public enum Buttons
@@ -13,7 +11,7 @@ namespace newgame
 
     public class Menu
     {
-        public static void UI()
+        public static void UI(Player player)
         {
             Buttons menu;
 
@@ -43,11 +41,10 @@ namespace newgame
                             break;
                         case Buttons.Skill:
                             Console.WriteLine("Viewing your skills...");
-                            foreach (var skill in Player.players[0].Skills)
+                            foreach (var skill in PlayerCreation.createdPlayers[0].playerClass.skills)
                             {
                                 Console.WriteLine($"Skill Name: {skill.skillName}");
                             }
-                            //going to fix tom
                             break;
                         case Buttons.Equipments:
                             Console.WriteLine("Accessing your equipment...");

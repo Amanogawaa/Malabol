@@ -10,7 +10,7 @@ public class Player
     public int physicalAttack;
     public int magicAttack;
     public int defense;
-    public List<Skill> Skills = new List<Skill>();
+    public static List<Skill> Skills = new List<Skill>();
 
 
     public static List<Player> players = new List<Player>();

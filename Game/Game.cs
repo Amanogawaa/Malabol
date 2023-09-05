@@ -6,6 +6,7 @@ public class Game
     public static void GameStart()
     {
         PlayerCreation.MainMenu();
+        Menu.UI(PlayerCreation.createdPlayers[0]);
         BattleSystem.BattleStart();
     }
 }

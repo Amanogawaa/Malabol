@@ -139,10 +139,10 @@ public class PlayerCreation
                 Console.WriteLine($"Physical Damage: {newPlayer.physicalAttack}");
                 Console.WriteLine($"Magic Damage: {newPlayer.magicAttack}");
                 Console.WriteLine("--------------------------------------------------");
-                foreach (var skill in newPlayer.playerClass.skills)
-                {
-                    Console.WriteLine($"Skill Name:{skill.skillName}");
-                }
+                // foreach (var skill in newPlayer.playerClass.skills)
+                // {
+                //     Console.WriteLine($"Skill Name:{skill.skillName}");
+                // }
                 createdPlayers.Add(newPlayer);
                 Console.WriteLine("--------------------------------------------------");
             }
