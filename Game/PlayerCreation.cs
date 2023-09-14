@@ -4,7 +4,7 @@ namespace newgame;
 
 public class PlayerCreation
 {
-    public static List<Player> createdPlayers = new List<Player>();
+    public static List<Player> currentPlayer = new List<Player>();
     // Main Menu
     public static void MainMenu()
     {
@@ -143,7 +143,7 @@ public class PlayerCreation
                 // {
                 //     Console.WriteLine($"Skill Name:{skill.skillName}");
                 // }
-                createdPlayers.Add(newPlayer);
+                currentPlayer.Add(newPlayer);
                 Console.WriteLine("--------------------------------------------------");
             }
         }

@@ -51,4 +51,13 @@ public class Player
             Console.WriteLine($"{target.mobName} is already dead!");
         }
     }
+
+    public static void PrintSkill()
+    {
+        Console.WriteLine($"SKills");
+        foreach (var item in PlayerCreation.currentPlayer[0].playerClass.skills)
+        {
+            Console.WriteLine($"Skill Name: {item.skillName}  Skill Level: {item.skillLevel} Skill Damage: {item.skillDamage}");
+        }
+    }
 }

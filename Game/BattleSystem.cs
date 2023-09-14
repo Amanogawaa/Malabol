@@ -9,7 +9,7 @@ public class BattleSystem
     {
         Random random = new Random();
 
-        playerOnMove.Add(PlayerCreation.createdPlayers[0]);
+        playerOnMove.Add(PlayerCreation.currentPlayer[0]);
         int selectMobs = random.Next(0, Mobs.LevelOne.Count - 1);
         mobOnMove.Add(Mobs.LevelOne[selectMobs]);
         Console.WriteLine($"Selected Mob: {Mobs.LevelOne[selectMobs].mobName}");

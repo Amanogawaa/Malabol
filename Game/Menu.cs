@@ -35,16 +35,14 @@ namespace newgame
                     {
                         case Buttons.Battle:
                             Console.WriteLine("Starting a battle...");
+                            BattleSystem.BattleStart();
                             break;
                         case Buttons.Inventory:
                             Console.WriteLine("Opening the inventory...");
                             break;
                         case Buttons.Skill:
                             Console.WriteLine("Viewing your skills...");
-                            foreach (var skill in PlayerCreation.createdPlayers[0].playerClass.skills)
-                            {
-                                Console.WriteLine($"Skill Name: {skill.skillName}");
-                            }
+                            Player.PrintSkill();
                             break;
                         case Buttons.Equipments:
                             Console.WriteLine("Accessing your equipment...");
